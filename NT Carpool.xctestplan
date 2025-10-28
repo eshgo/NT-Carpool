@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "5EDD4606-AF23-457D-B384-90E75B584401",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:NT Carpool.xcodeproj",
+      "identifier" : "F338DC1E2E038C4C00195713",
+      "name" : "NT Carpool"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:NT Carpool.xcodeproj",
+        "identifier" : "F338DC2B2E038C4E00195713",
+        "name" : "NT CarpoolTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:NT Carpool.xcodeproj",
+        "identifier" : "F338DC352E038C4E00195713",
+        "name" : "NT CarpoolUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

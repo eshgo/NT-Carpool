@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F3C97BA82E9F6F00004658AD /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F3C97BA72E9F6F00004658AD /* FirebaseAnalytics */; };
+		F3C97BAA2E9F6F00004658AD /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = F3C97BA92E9F6F00004658AD /* FirebaseCore */; };
+		F3C97BAC2E9F6F00004658AD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F3C97BAB2E9F6F00004658AD /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		F338DC2D2E038C4E00195713 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +33,7 @@
 		F338DC1F2E038C4C00195713 /* NT Carpool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NT Carpool.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F338DC2C2E038C4E00195713 /* NT CarpoolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NT CarpoolTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F338DC362E038C4E00195713 /* NT CarpoolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NT CarpoolUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3C97B9B2E9E21D0004658AD /* NT Carpool.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "NT Carpool.xctestplan"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3C97BAA2E9F6F00004658AD /* FirebaseCore in Frameworks */,
+				F3C97BA82E9F6F00004658AD /* FirebaseAnalytics in Frameworks */,
+				F3C97BAC2E9F6F00004658AD /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +85,7 @@
 		F338DC162E038C4C00195713 = {
 			isa = PBXGroup;
 			children = (
+				F3C97B9B2E9E21D0004658AD /* NT Carpool.xctestplan */,
 				F338DC212E038C4C00195713 /* NT Carpool */,
 				F338DC2F2E038C4E00195713 /* NT CarpoolTests */,
 				F338DC392E038C4E00195713 /* NT CarpoolUITests */,
@@ -112,6 +123,9 @@
 			);
 			name = "NT Carpool";
 			packageProductDependencies = (
+				F3C97BA72E9F6F00004658AD /* FirebaseAnalytics */,
+				F3C97BA92E9F6F00004658AD /* FirebaseCore */,
+				F3C97BAB2E9F6F00004658AD /* FirebaseFirestore */,
 			);
 			productName = "NT Carpool";
 			productReference = F338DC1F2E038C4C00195713 /* NT Carpool.app */;
@@ -195,6 +209,9 @@
 			);
 			mainGroup = F338DC162E038C4C00195713;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F3C97BA62E9F6F00004658AD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F338DC202E038C4C00195713 /* Products */;
 			projectDirPath = "";
@@ -393,13 +410,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "NT Carpool/NT Carpool.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_PREVIEWS = YES;
+				DEVELOPMENT_TEAM = 397FY3V42L;
+				ENABLE_PREVIEWS = "DWARF with dSYM File";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "NT-Carpool-Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Allow \"Always\" so we can compute driving time for matching. We never share your address or location with other users.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow \"When In Use\" so we can compute driving time for matching. We never share your address or location with other users.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -407,6 +429,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = "DWARF with dSYM File\n";
+				MTL_FAST_MATH = "DWARF with dSYM File";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.egodbole.NT-Carpool";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -420,13 +444,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "NT Carpool/NT Carpool.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_PREVIEWS = YES;
+				DEVELOPMENT_TEAM = 397FY3V42L;
+				ENABLE_PREVIEWS = "DWARF with dSYM File";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "NT-Carpool-Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Allow \"Always\" so we can compute driving time for matching. We never share your address or location with other users.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow \"When In Use\" so we can compute driving time for matching. We never share your address or location with other users.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -434,6 +463,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = "DWARF with dSYM File\n";
+				MTL_FAST_MATH = "DWARF with dSYM File";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.egodbole.NT-Carpool";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -550,6 +581,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F3C97BA62E9F6F00004658AD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F3C97BA72E9F6F00004658AD /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3C97BA62E9F6F00004658AD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		F3C97BA92E9F6F00004658AD /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3C97BA62E9F6F00004658AD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		F3C97BAB2E9F6F00004658AD /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3C97BA62E9F6F00004658AD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F338DC172E038C4C00195713 /* Project object */;
 }

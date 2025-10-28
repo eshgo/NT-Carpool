@@ -4,13 +4,14 @@
 <dict>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
-		<key>Supports Location Access</key>
-		<string>&lt;key&gt;NSLocationWhenInUseUsageDescription&lt;/key&gt;
-&lt;string&gt;This app needs your location to find the best carpool driver.&lt;/string&gt;</string>
 		<key>UIApplicationSupportsMultipleScenes</key>
-		<true/>
-		<key>UISceneConfigurations</key>
-		<dict/>
+		<false/>
 	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
+	<key>UILaunchScreen</key>
+	<dict/>
 </dict>
 </plist>
