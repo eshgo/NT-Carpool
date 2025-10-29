@@ -1,4 +1,5 @@
 # Xcode
+*.plist
 .DS_Store
 xcuserdata/
 *.xcscmblueprint
